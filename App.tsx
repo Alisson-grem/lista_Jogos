@@ -1,11 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {FlatList, StyleSheet, Text, View } from 'react-native';
+import Jogos from './components/Jogos';
+const jogos = [
+  {"id":"1",nome: "Elden Ring: NigthReing",preco: "???",plat: "PS5,PC,XBOX'XS/XR"}
+]
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.texto}>Lista de Jogos</Text>
+      <View style={styles.lista}>
+      <FlatList
+        data={jogos}
+        keyExtractor={item=>item.id}
+        renderItem={({item}) => <Jogos  preco={item.preco} plat={item.plat} nome={item.nome} />}
+      />
+      </View>
+
+
+
     </View>
   );
 }
@@ -16,5 +29,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  texto: {
+    color:'#FFFFFF',
+    fontSize: 20,
+    fontWeight:'bold'
+  },
+  lista: {
+    height: 550,
+    width: '85%',
+    marginLeft: '10%',
   },
 });
