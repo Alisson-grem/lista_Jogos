@@ -14,7 +14,7 @@ export default function Jogos({nome, preco, plat}:propsJogos){
                     Nome: {nome}
                 </Text>
                 <Text style={styles.preco}>
-                    Preço: {preco} 
+                     {preco} 
                 </Text>
                 <Text style={styles.plat}>
                     Plataforma: {plat}
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   },
   preco: {
     fontSize: 17,
-    color: "#DCDCDC",
+    color: "#ADFF2F",
     fontWeight: 'bold',
   },
   plat: {
