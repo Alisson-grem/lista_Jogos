@@ -6,7 +6,7 @@ interface propsJogos{
     plat:string
 }
 
-export default function Jogos({nome, preco,plat}:propsJogos){
+export default function Jogos({nome, preco, plat}:propsJogos){
 
     return(
             <View style={styles.cartao}>
@@ -28,28 +28,30 @@ export default function Jogos({nome, preco,plat}:propsJogos){
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#1C1C1C',
     alignItems: 'center',
     justifyContent: 'center',
   },
   cartao: {
-      backgroundColor:"#7B68EE",
+      backgroundColor:"#4F4F4F",
       padding:15,
       marginVertical:20,
       borderRadius:20,
       width:'90%',
   },
   nome: {
-    color:"#00FF00",
+    color:"#DCDCDC",
     fontSize:17,
     fontWeight:'bold'
   },
   preco: {
     fontSize: 17,
-    color: "#00FF7F",
+    color: "#DCDCDC",
     fontWeight: 'bold',
   },
   plat: {
-
+    fontSize: 17,
+    color: "#DCDCDC",
+    fontWeight: 'bold',
   }
 });
