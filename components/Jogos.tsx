@@ -11,7 +11,7 @@ export default function Jogos({nome, preco, plat}:propsJogos){
     return(
             <View style={styles.cartao}>
                 <Text style={styles.nome}>
-                    Nome: {nome}
+                     {nome}
                 </Text>
                 <Text style={styles.preco}>
                      {preco} 
